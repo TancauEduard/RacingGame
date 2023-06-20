@@ -1,20 +1,26 @@
 package org.eduard;
 
-public class Car {
-    String name;
+public class Car extends AutoVehicle{
+    /*String name;
     double fuelLevel, mileage, totalTraveledDistance;
-    int doorCount, maxSpeed;
-    boolean isDamged;
-    Engine engine;
+    int maxSpeed;
+    boolean isDamaged;
+    -------------------------> Vehicle */
 
-    public Car(String name, double fuelLevel, double mileage, double totalTraveledDistance, int doorCount, int maxSpeed, boolean isDamged, Engine engine) {
+    // Engine engine; -----> AutoVehicle
+
+    int doorCount;
+
+
+    public Car(String name, double fuelLevel, double mileage, double totalTraveledDistance,
+               int doorCount, int maxSpeed, boolean isDamaged, Engine engine) {
         this.name = name;
         this.fuelLevel = fuelLevel;
         this.mileage = mileage;
         this.totalTraveledDistance = totalTraveledDistance;
         this.doorCount = doorCount;
         this.maxSpeed = maxSpeed;
-        this.isDamged = isDamged;
+        this.isDamaged = isDamaged;
         this.engine = engine;
     }
 
@@ -26,7 +32,7 @@ public class Car {
         System.out.println("Total distance traveled by car: " + totalTraveledDistance);
         System.out.println("Car doors: " + doorCount);
         System.out.println("Max speed: " + maxSpeed);
-        System.out.println("Is damaged: " + isDamged);
+        System.out.println("Is damaged: " + isDamaged);
         engine.DisplayProperties();
     }
 }
